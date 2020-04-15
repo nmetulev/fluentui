@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+      @font-face {
+        font-family: 'FabricMDL2Icons';
+        src: url('https://static2.sharepointonline.com/files/fabric/assets/icons/fabricmdl2icons-2.68.woff2')
+            format('woff2'),
+          url(https://static2.sharepointonline.com/files/fabric/assets/icons/fabricmdl2icons-2.68.woff) format('woff'),
+          url(https://static2.sharepointonline.com/files/fabric/assets/icons/fabricmdl2icons-2.68.ttf)
+            format('truetype');
+      }
+    </style>
+    <script type="module" src="./dist/fluent-button.js"></script>
+    <style>
+      body {
+        background: light;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>Default</h4>
+    <fluent-button text="Hello"></fluent-button>
+
+    <h4>Overflow</h4>
+    <fluent-button
+      text="Text truncates after it hits the max valueText truncates after it hits the max value"
+    ></fluent-button>
+
+    <h4>Icon</h4>
+    <fluent-button icon="Add"></fluent-button>
+
+    <h4>Icon and Text</h4>
+    <fluent-button icon="Add" Text="Add"></fluent-button>
+
+    <h4>Icon after</h4>
+    <fluent-button icon="Add" Text="Add" iconPosition="after"></fluent-button>
+
+    <h4>Sloted</h4>
+    <fluent-button iconPosition="after">
+      Hi there
+    </fluent-button>
+
+    <h4>Disabled</h4>
+    <fluent-button disabled icon="Add" Text="Add" iconPosition="after"></fluent-button>
+  </body>
+</html>

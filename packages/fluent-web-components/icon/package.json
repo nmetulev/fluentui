@@ -1,0 +1,52 @@
+{
+  "name": "@fluentui/fluent-icon",
+  "version": "0.0.0",
+  "description": "React components for building web experiences.",
+  "private": true,
+  "module": "dist/index.js",
+  "sideEffects": [
+    "lib/version.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/fluentui"
+  },
+  "license": "MIT",
+  "scripts": {
+    "//build": "just-scripts build",
+    "clean": "just-scripts clean",
+    "code-style": "just-scripts code-style",
+    "just": "just-scripts",
+    "lint": "just-scripts lint",
+    "//start": "just-scripts dev:storybook",
+    "start-test": "just-scripts jest-watch",
+    "test": "just-scripts test",
+    "update-api": "just-scripts update-api",
+    "update-snapshots": "just-scripts jest -u",
+    "sass": "gulp sass",
+    "sass:watch": "gulp watchSass",
+    "build": "npm run sass && tsc",
+    "build:ts:watch": "tsc --watch",
+    "build:watch": "run-p sass:watch build:ts:watch"
+  },
+  "devDependencies": {
+    "@types/enzyme": "3.10.3",
+    "@types/enzyme-adapter-react-16": "1.0.3",
+    "@types/es6-promise": "0.0.32",
+    "@types/jest": "~24.9.0",
+    "@types/webpack-env": "1.15.1",
+    "@uifabric/build": "^7.0.0",
+    "@uifabric/tslint-rules": "^7.1.2",
+    "gulp": "^4.0.2",
+    "gulp-append-prepend": "^1.0.8",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@uifabric/set-version": "^7.0.9",
+    "lit-element": "^2.3.1",
+    "office-ui-fabric-core": "11.0.0"
+  }
+}

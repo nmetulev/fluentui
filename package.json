@@ -57,15 +57,17 @@
     "update-api": "cd packages/office-ui-fabric-react && npm run update-api",
     "update-snapshots": "lerna run update-snapshots --stream",
     "update-a11y": "cd apps/a11y-tests && npm run update-snapshots",
-    "vrtest": "cd apps && cd vr-tests && npm run screener"
+    "vrtest": "cd apps && cd vr-tests && npm run screener",
+    "start:wc": "es-dev-server --node-resolve --open --watch"
   },
   "devDependencies": {
     "beachball": "^1.28.1",
-    "lerna": "^3.15.0",
-    "lint-staged": "^7.0.5",
     "cross-env": "^5.1.4",
     "danger": "^6.0.5",
+    "es-dev-server": "^1.46.2",
     "gulp": "^4.0.2",
+    "lerna": "^3.15.0",
+    "lint-staged": "^7.0.5",
     "sass-loader": "^6.0.6",
     "satisfied": "^1.1.1",
     "syncpack": "^4.5.4",
@@ -98,7 +100,8 @@
       "apps/*",
       "packages/*",
       "scripts",
-      "packages/fluentui/*"
+      "packages/fluentui/*",
+      "packages/fluent-web-components/*"
     ]
   },
   "resolutions": {

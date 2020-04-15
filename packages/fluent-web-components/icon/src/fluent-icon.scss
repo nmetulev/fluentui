@@ -1,0 +1,22 @@
+/**
+ * -------------------------------------------------------------------------------------------
+ * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.
+ * See License in the project root for license information.
+ * -------------------------------------------------------------------------------------------
+ */
+
+@import '../../../node_modules/office-ui-fabric-core/dist/sass/References';
+@import '../../../node_modules/office-ui-fabric-core/dist/sass/Icon';
+
+$font-size: var(--fluent-icon--font-size, 14px);
+$color: var(--fluent-icon--color);
+
+:host {
+  display: inline-block;
+  height: $font-size;
+
+  i.ms-Icon {
+    font-size: $font-size;
+    color: $color;
+  }
+}
