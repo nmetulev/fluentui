@@ -18,5 +18,6 @@ $color: var(--fluent-icon--color);
   i.ms-Icon {
     font-size: $font-size;
     color: $color;
+    line-height: $font-size;
   }
 }

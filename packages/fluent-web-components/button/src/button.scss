@@ -1,0 +1,182 @@
+@import '../../../node_modules/office-ui-fabric-core/dist/sass/References';
+
+// Root
+$button-background: --fluent-button--background;
+$button-hover-background: --fluent-button--hover-background;
+$button-focus-background: --fluent-button--focus-background;
+$button-active-background: --fluent-button--active-background;
+
+$button-color: --fluent-button--color;
+$button-hover-color: --fluent-button--hover-color;
+$button-focus-color: --fluent-button--focus-color;
+$button-active-color: --fluent-button--active-color;
+
+// Text
+$font-weight: --fluent-button--font-weight;
+$font-size: --fluent-button--font-size;
+$line-height: --fluent-button--line-height;
+
+$button-border-color: var(--fluent-button--border-color, transparent);
+$button-border-radius: var(--fluent-button--border-radius, 4px);
+$button-padding: var(--fluent-button--padding, 0 20px 0 20px);
+$button-min-height: var(--fluent-button--min-height, 32px);
+$button-max-width: var(--fluent-button--max-width, 280px);
+
+:host {
+  display: inline-flex;
+  outline: none;
+  font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto,
+    'Helvetica Neue', sans-serif;
+}
+
+:host([disabled]) {
+  pointer-events: none;
+}
+
+.root {
+  min-height: $button-min-height;
+  max-width: $button-max-width;
+  padding: $button-padding;
+
+  border-radius: $button-border-radius;
+  border-color: $button-border-color;
+  border-style: solid;
+
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+  flex: 1 1 auto;
+  overflow: hidden;
+  outline: none;
+
+  cursor: pointer;
+  color: var($button-color, #484848);
+  font-weight: var($font-weight, normal);
+  font-size: var($font-size, 14px);
+  line-height: var($line-height, 20px);
+
+  .text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &.icon-only {
+    padding: var(--fluent-button--padding, 0 8px);
+  }
+
+  &:not(.icon-only) {
+    &:not(.icon-after) .icon {
+      margin-right: 8px;
+    }
+
+    &.icon-after .icon {
+      margin-left: 8px;
+    }
+  }
+
+  &:hover {
+    background: #ffffff; // should this be a var
+  }
+
+  &:active {
+    background: #f9f9f9; // should this be a var
+  }
+
+  &:focus {
+    outline: 0;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      border-width: 1px;
+      border-style: solid;
+      border-color: transparent;
+      pointer-events: none;
+      border-radius: $button-border-radius;
+      left: 2px;
+      top: 2px;
+      bottom: 2px;
+      right: 2px;
+      z-index: 1;
+      outline: rgb(96, 94, 92) solid 1px;
+    }
+  }
+}
+
+.root.transparent {
+  background: var($button-background, transparent);
+
+  &:hover {
+    background: var($button-hover-background, transparent);
+    color: var($button-color, #0078d7);
+  }
+
+  &:active {
+    background: var($button-active-background, #eaeaea);
+    color: var($button-color, #005a9e);
+  }
+}
+
+.root.neutralLighter {
+  background: var($button-background, #fcfcfc);
+
+  &:hover {
+    background: var($button-hover-background, transparent);
+  }
+
+  &:active {
+    background: var($button-active-background, #fafafa);
+  }
+}
+
+.root.neutralDarker {
+  background: var($button-background, #f1f1f1);
+
+  &:hover {
+    background: var($button-hover-background, #eeeeee);
+  }
+
+  &:active {
+    background: var($button-active-background, #ebebeb);
+  }
+}
+
+.root.outline {
+  background: var($button-background, transparent);
+  border-color: #c8c8c8;
+  &:hover {
+    border-color: #aaaaaa;
+  }
+
+  &:active {
+    border-color: #8c8c8c;
+  }
+}
+
+.root.primary {
+  background: var($button-background, #0078d4);
+  color: var($button-color, white);
+
+  &:hover {
+    background: var($button-hover-background, #106ebe);
+  }
+
+  &:active {
+    background: var($button-active-background, #005a9e);
+  }
+}
+
+.root:disabled {
+  background: var($button-background, #eaeaea);
+  color: #c8c8c8;
+
+  &:hover {
+    background: var($button-hover-background, #106ebe);
+  }
+
+  &:active {
+    background: var($button-active-background, #005a9e);
+  }
+}

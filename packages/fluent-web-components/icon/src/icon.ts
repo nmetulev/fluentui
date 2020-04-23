@@ -1,5 +1,5 @@
 import { customElement, html, LitElement, property } from 'lit-element';
-import { styles } from './fluent-icon-css';
+import { styles } from './icon-css';
 
 /**
  * Represents an Icon

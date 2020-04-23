@@ -1,1 +1,1 @@
-export * from './fluent-icon';
+export * from './icon';
